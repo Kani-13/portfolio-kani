@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kanimozhi M | Portfolio</title>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --clr-primary:#2c3e50;
+    --clr-light:#ffffff;
+    --clr-grey:#ecf0f1;
+    --clr-text:#333333;
+    --radius:8px;
+    --shadow:0 2px 10px rgba(0,0,0,0.08);
+    --transition:color .3s ease, background-color .3s ease;
+}
+/* Reset and base */
+*,
+*::before,
+*::after{box-sizing:border-box;}
+body{
+    margin:0;
+    font-family:'Inter',Arial,Helvetica,sans-serif;
+    line-height:1.6;
+    color:var(--clr-text);
+    background-color:var(--clr-grey);
+    scroll-behavior:smooth;
+}
+img{max-width:100%;display:block;border-radius:var(--radius);}
+a{color:inherit;text-decoration:none;transition:var(--transition);} 
+ul{list-style:none;padding:0;margin:0;}
+.container{width:90%;max-width:960px;margin-inline:auto;}
+/* Navbar */
+.navbar{
+    position:fixed;top:0;inset-inline:0;
+    background-color:var(--clr-primary);
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+    z-index:1000;
+}
+.navbar__inner{display:flex;justify-content:space-between;align-items:center;padding-block:1rem;}
+.navbar__logo{font-size:1.5rem;font-weight:700;color:var(--clr-light);}
+.navbar__links{display:flex;gap:1rem;}
+.navbar__link{color:var(--clr-light);} 
+.navbar__link:hover{color:#ccc;}
+/* Hero */
+.hero{
+    padding-block:8rem 4rem;
+    background-color:var(--clr-primary);
+    color:var(--clr-light);
+    text-align:center;
+    box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+.hero h1{font-size:clamp(2rem,6vw,3rem);margin-bottom:.5rem;}
+.hero p{font-size:1.25rem;margin-top:0;}
+.contact{
+    display:flex;flex-direction:column;align-items:center;gap:.75rem;margin-top:2rem;
+}
+.contact__item{display:flex;align-items:center;gap:.5rem;font-size:1rem;}
+/* Sections */
+section{background-color:var(--clr-light);margin-top:2rem;padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);} 
+.section-title{font-size:2rem;font-weight:600;color:var(--clr-primary);margin-top:0;margin-bottom:1.5rem;position:relative;} 
+.section-title::after{content:'';position:absolute;bottom:-.25rem;left:0;width:3rem;height:2px;background:var(--clr-primary);} 
+.grid-2{display:grid;grid-template-columns:1fr;gap:1.5rem;}
+@media(min-width:768px){.grid-2{grid-template-columns:repeat(2,1fr);} .contact{flex-direction:row;}}
+.skill-category h3{margin-top:0;font-size:1.1rem;font-weight:600;color:var(--clr-primary);} 
+/* Footer */
+footer{background-color:var(--clr-primary);color:var(--clr-light);text-align:center;padding:1rem;margin-top:4rem;}
+/* Utilities */
+.badge{display:inline-block;padding:.1rem .5rem;border-radius:4px;background:var(--clr-primary);color:var(--clr-light);font-size:.75rem;}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar" aria-label="Primary">
+    <div class="container navbar__inner">
+        <a href="#home" class="navbar__logo">Kanimozhi M</a>
+        <ul class="navbar__links" role="list">
+            <li><a class="navbar__link" href="#summary">Summary</a></li>
+            <li><a class="navbar__link" href="#education">Education</a></li>
+            <li><a class="navbar__link" href="#skills">Skills</a></li>
+            <li><a class="navbar__link" href="#projects">Projects</a></li>
+            <li><a class="navbar__link" href="#certifications">Certifications</a></li>
+            <li><a class="navbar__link" href="#achievements">Achievements</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Hero -->
+<header id="home" class="hero">
+    <div class="container">
+        <h1>Kanimozhi M</h1>
+        <p>Motivated Computer Science Student</p>
+        <div class="contact" aria-label="Contact information">
+            <a class="contact__item" href="mailto:mkanimozhistd@gmail.com">
+                <span class="badge">✉</span> mkanimozhistd@gmail.com
+            </a>
+            <span class="contact__item"><span class="badge">📞</span> +91 63835 44676</span>
+            <a class="contact__item" href="https://www.linkedin.com/in/kanimozhi-murugan-136932295" target="_blank" rel="noopener">
+                <span class="badge">in</span> LinkedIn
+            </a>
+            <a class="contact__item" href="https://github.com/Kani-13" target="_blank" rel="noopener">
+                <span class="badge">💻</span> GitHub
+            </a>
+        </div>
+    </div>
+</header>
+<main class="container">
+    <!-- Summary -->
+    <section id="summary">
+        <h2 class="section-title">Summary</h2>
+        <p>Motivated Computer Science student seeking an internship opportunity to gain hands‑on
+           experience, enhance technical skills and contribute meaningfully to real‑world projects.</p>
+    </section>
+    <!-- Education -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-item">
+            <h3>B.E Computer Science and Engineering <span class="badge">2022‑2026</span></h3>
+            <p>Coimbatore Institute of Engineering and Technology, Anna University — CGPA 8.69</p>
+        </div>
+        <div class="education-item">
+            <h3>HSC (12<sup>th</sup>) <span class="badge">2021</span></h3>
+            <p>Unity Matric Higher Secondary School — 80%</p>
+        </div>
+        <div class="education-item">
+            <h3>SSLC (10<sup>th</sup>) <span class="badge">2019</span></h3>
+            <p>Unity Matric Higher Secondary School — 84%</p>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="grid-2">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <ul role="list">
+                    <li>Python</li>
+                    <li>C</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <ul role="list">
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Tools</h3>
+                <ul role="list">
+                    <li>Git & GitHub</li>
+                    <li>Jupyter Notebook</li>
+                    <li>Power BI</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Libraries & Frameworks</h3>
+                <ul role="list">
+                    <li>FastAPI & Flask</li>
+                    <li>BERT</li>
+                    <li>Gemini API</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <article class="project-item">
+            <h3>Chronic Disease Analysis &amp; Prediction <span class="badge">Feb 2025</span></h3>
+            <p><strong>Tech:</strong> Jupyter Notebook, Power BI, SQL</p>
+            <p>Built an XGBoost model (85 % accuracy) for chronic‑disease prediction. Integrated SQL ODBC for live data and created an interactive Power BI dashboard for actionable healthcare insights.</p>
+        </article>
+        <article class="project-item">
+            <h3>NLP → SQL Converter <span class="badge">Feb–Apr 2025</span></h3>
+            <p><strong>Tech:</strong> FastAPI, Flask, Gemini API, BERT, SQLite</p>
+            <p>Developed an AI‑powered web app that converts natural language to SQL using the Gemini LLM and a BERT‑based model for enhanced query accuracy, built with FastAPI, Flask and SQLite.</p>
+        </article>
+    </section>
+    <!-- Certifications -->
+    <section id="certifications">
+        <h2 class="section-title">Certifications</h2>
+        <ul role="list">
+            <li>Python for Data Science — NPTEL (Jul‑Aug 2023)</li>
+            <li>Problem Solving through Programming in C — NPTEL (Jul‑Aug 2023)</li>
+            <li>Data Science for Engineers — NPTEL Elite (Jan‑Mar 2024)</li>
+            <li>Programming in Java — NPTEL Elite (Jan‑Mar 2024)</li>
+            <li>Foundations of Cybersecurity — Google Coursera (2024)</li>
+        </ul>
+    </section>
+    <!-- Achievements -->
+    <section id="achievements">
+        <h2 class="section-title">Achievements</h2>
+        <ul role="list">
+            <li><strong>Hackxelarate Hackathon:</strong> Advanced to Round 2 at KPR College for building an NL2SQL system using FastAPI, Gemini API and SQLite.</li>
+            <li>Participated in the Hack‑Forge Hackathon (Kalam 2025) hosted by Sri Sakthi Institute of Engineering & Technology.</li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; <span id="year"></span> Kanimozhi M. All rights reserved.</p>
+    </div>
+</footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
